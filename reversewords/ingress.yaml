@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: reverse-words
+  namespace: reverse-words
+spec:
+  rules:
+  - host: reverse-words.tms.yuanfu.io
+    http:
+      paths:
+      - backend:
+          serviceName: reverse-words
+          servicePort: 8080

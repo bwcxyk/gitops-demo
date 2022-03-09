@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: demo
+  namespace: demo
+spec:
+  rules:
+  - host: demo.tms.yuanfu.io
+    http:
+      paths:
+      - backend:
+          serviceName: demo
+          servicePort: 8080
